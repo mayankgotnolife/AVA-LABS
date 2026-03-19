@@ -28,10 +28,10 @@ export default function Home() {
       <Process />
       <Testimonials />
       <CTA />
-      <Footer />
       <TrustSection />
       <BlogSection />
       <StudioSection />
+      <Footer />
 
     </main>
   );

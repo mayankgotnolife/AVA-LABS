@@ -21,7 +21,7 @@ export default function AboutSection() {
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
-        className="text-gray-400 max-w-2xl mx-auto mb-16"
+        className="text-gray-300 max-w-2xl mx-auto mb-16"
       >
         AVA Labs is a modern product agency focused on building AI, Web3, and
         scalable SaaS products in record time. We help founders turn ideas into
@@ -56,7 +56,7 @@ export default function AboutSection() {
             <h3 className="text-xl font-semibold mb-3">
               {item.title}
             </h3>
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-300 text-sm">
               {item.desc}
             </p>
           </motion.div>

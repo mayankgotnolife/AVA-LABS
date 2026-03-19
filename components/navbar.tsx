@@ -27,10 +27,12 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         
-        {/* Logo */}
-        <h1 className="text-xl font-bold tracking-widest">
-          AVA LABS
-        </h1>
+        {/* Logo (Clickable) */}
+        <Link href="/">
+          <h1 className="text-xl font-bold tracking-widest cursor-pointer">
+            AVA LABS
+          </h1>
+        </Link>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8 text-sm text-gray-300">
@@ -43,17 +45,29 @@ export default function Navbar() {
           <Link href="/studio">Studio</Link>
         </div>
 
-        {/* Desktop CTA */}
-        <div className="hidden md:block">
+        {/* 🔥 DESKTOP CTA (2 BUTTONS NOW) */}
+        <div className="hidden md:flex items-center gap-4">
+          
+          {/* Calendly */}
+          <a
+            href="https://calendly.com/yourname/30min"
+            target="_blank"
+            className="px-4 py-2 border border-white/20 rounded-lg text-sm hover:bg-white/10 transition"
+          >
+            Free Consultation
+          </a>
+
+          {/* Contact */}
           <Link
             href="/contact"
-            className="px-4 py-2 bg-white text-black rounded-lg text-sm font-medium"
+            className="px-4 py-2 bg-white text-black rounded-lg text-sm font-medium hover:scale-105 transition"
           >
             Start Project
           </Link>
+
         </div>
 
-        {/* ✅ MOBILE BUTTON (FIXED) */}
+        {/* Mobile Button */}
         <button
           onClick={() => setOpen(!open)}
           className="md:hidden flex items-center justify-center w-10 h-10 rounded-lg hover:bg-white/10 transition"
@@ -63,7 +77,7 @@ export default function Navbar() {
 
       </div>
 
-      {/* ✅ MOBILE MENU (WITH ALL PAGES) */}
+      {/* Mobile Menu */}
       {open && (
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -81,11 +95,20 @@ export default function Navbar() {
           <Link href="/blog" onClick={() => setOpen(false)}>Blog</Link>
           <Link href="/studio" onClick={() => setOpen(false)}>Studio</Link>
 
-          {/* CTA */}
+          {/* 🔥 Mobile CTA */}
+          <a
+            href="https://calendly.com/yourname/30min"
+            target="_blank"
+            onClick={() => setOpen(false)}
+            className="px-4 py-2 border border-white/20 rounded-lg text-center"
+          >
+            Free Consultation
+          </a>
+
           <Link
             href="/contact"
             onClick={() => setOpen(false)}
-            className="mt-4 px-4 py-2 bg-white text-black rounded-lg text-center font-medium"
+            className="px-4 py-2 bg-white text-black rounded-lg text-center font-medium"
           >
             Start Project
           </Link>
